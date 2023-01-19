@@ -37,5 +37,7 @@ Build a model that can predict if a customer will accept a credit card offer or 
 
 ## Outcomes
 
-the main outcomes of the analysis can be viewed below or via the notebook
+The main outcomes of the analysis can be viewed below or via the notebook
+
+![alt text](https://raw.githubusercontent.com/nataschaberg/mid_data_classification/master/model_results.png)
 
