@@ -34,6 +34,8 @@ Build a model that can predict if a customer will accept a credit card offer or 
 - `sql` directory: contains slq queries connected to this project
 - `files` directory: contains the dataset in bot `xlsx` and `csv` format
 - `notebooks` directory: contains a jupyter notebook with the whole analysis
+- `tableau` directory: contains the tableau workbook we created to visalize the dataset
+- `slides` directory: contains the short presentaion slides
 
 ## Outcomes
 
@@ -41,3 +43,10 @@ The main outcomes of the analysis can be viewed below or via the notebook
 
 ![alt text](https://raw.githubusercontent.com/nataschaberg/mid_data_classification/master/model_results.png)
 
+
+
+## Feel free to explore the dataset via Tableau
+![alt text](https://github.com/nataschaberg/mid_data_classification/blob/master/dashboard_bank_classification.png)
+
+
+you can also find the dashboard [here](https://public.tableau.com/app/profile/natascha2339/viz/ProjectwNatascha_ver3/Dashboard3) 
