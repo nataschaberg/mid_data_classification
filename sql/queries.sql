@@ -54,11 +54,17 @@ SELECT credit_rating, ROUND(AVG(credit_cards_held)) AS avg_credit_card_held_by_c
   FROM credit_card_data
  GROUP BY credit_rating;
 
--- maybe do this differently...
+-- correlation between credit card held and bank accounts open:
+-- we see that the majority of accounts have 1 bank account with crdit cards 2, 1, 3 (ordered by cusomer amount)
+-- which gives us the most popular combination of 1 bank account and 2 credit cards
+-- the least popular combinations are 3 bank accoutns with varying credit cards held
+-- the middle ranks are not that clear - even though we see that more bank accounts correlates with less customers the credit 
+-- cards held are mixed here
+
 SELECT credit_cards_held, bank_accounts_open, COUNT(*) AS accounts
   FROM credit_card_data
  GROUP BY credit_cards_held, bank_accounts_open
- ORDER BY credit_cards_held DESC, accounts DESC;
+ ORDER BY accounts DESC;
 
 SELECT * FROM credit_card_data;
 -- 11
@@ -111,6 +117,7 @@ SELECT mailer_type, COUNT(*) AS number_of_customers
  GROUP BY mailer_type;
 
 -- 17
+-- pls note that we get 3 customer accounts as a result here; if you want just select one pls limit the query to 1
 SELECT *
 	 FROM (SELECT *,
 		   DENSE_RANK() OVER (ORDER BY q1_balance ASC) AS ranking
